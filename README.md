@@ -21,9 +21,10 @@ An implementation of the [Incubyte's String Calculator Kata](https://blog.incuby
 
 - **TDD Implementation**: Strict red-green-refactor cycle with atomic commits
 - **Robust Validation**:
-  - Empty string handling → `0`
-  - Negative number detection with descriptive errors
-  - Custom delimiter support (`//[delimiter]\n...`)
+  - [X] Empty string handling → `0`
+  - [X] Negative number detection with descriptive errors
+  - [X] Custom delimiter support (`//[delimiter]\n...`)
+  - [X] **Number Filtering**: Ignores numbers greater than 1000
 - **100% Test Coverage**: Comprehensive test suite with edge cases
 - **CI/CD Pipeline**: Automated testing via GitHub Actions
 - **Type Safety**: Full TypeScript implementation with strict checks
