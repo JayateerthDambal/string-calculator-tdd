@@ -11,13 +11,20 @@ function parseDelimiter(input: string): { delimiter: string | RegExp; numbers: s
     return { delimiter: /[,\n]/, numbers: input };
 }
 
+// New helper function to handle number parsing logic
+function parseNumber(numStr: string): number {
+    const num = parseInt(numStr, 10);
+    return num > 1000 ? 0 : num; // Ignore numbers greater than 1000
+}
+
 export function add(numbers: string): number {
     if (numbers === '') return 0;
 
     const { delimiter, numbers: numbersPart } = parseDelimiter(numbers);
-    const nums = numbersPart.split(delimiter).map(num => parseInt(num, 10));
 
-    // Checks for negative inputs
+    const nums = numbersPart.split(delimiter)
+        .map(parseNumber);
+
     const negatives = nums.filter(num => num < 0);
     if (negatives.length > 0) {
         throw new Error(`negatives not allowed: ${negatives.join(', ')}`);

@@ -26,12 +26,24 @@ describe('add', () => {
         expect(add('//;\n1;2')).toBe(3); // Assertion: "//;\n1;2" → 3
     });
 
-    // * This test if for negative inputs
+    // * This test is for negative inputs
     it('throws error for negative numbers', () => {
         // Single negative input
         expect(() => add('-1,2')).toThrow('negatives not allowed: -1');
         // Multiple negatives inputs
         expect(() => add('2,-4,-5')).toThrow('negatives not allowed: -4, -5');
+    });
+
+    //* This test is for checking if nunber is greater than 100
+    it('ignores numbers greater than 1000', () => {
+        expect(add('2,1001')).toBe(2); // 2 + 1001 → 2
+        expect(add('1001,1002')).toBe(0); // All ignored
+        expect(add('5,1200,3')).toBe(8); // 5 + 3 = 8
+    });
+
+    // * This test is for handling Edge Case:
+    it('handles numbers equal to 1000', () => {
+        expect(add('1000,2')).toBe(1002); // 1000 + 2 = 1002
     });
 
 });
