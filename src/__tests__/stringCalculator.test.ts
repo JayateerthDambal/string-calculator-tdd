@@ -20,4 +20,9 @@ describe('add', () => {
     it('returns sum of numbers separated by new line', () => {
         expect(add('9\n8,7')).toBe(24);
     });
+
+    //* This test is for allowing custom delimeters
+    it('supports custom delimiters', () => {
+        expect(add('//;\n1;2')).toBe(3); // Assertion: "//;\n1;2" → 3
+    });
 });
