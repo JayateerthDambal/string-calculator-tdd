@@ -16,4 +16,8 @@ describe('add', () => {
         expect(add('4, 5')).toBe(9); // Adding 4 + 5 => 9
     });
 
+    //* This test is for New line delimters
+    it('returns sum of numbers separated by new line', () => {
+        expect(add('9\n8,7')).toBe(24);
+    });
 });
