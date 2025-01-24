@@ -1,7 +1,16 @@
 import { add } from '../stringCalculator';
 
+//* This test is for checking if the function returns 0 if NO String is provided
 describe('add', () => {
     it('returns 0 for an empty string', () => {
         expect(add('')).toBe(0);
     });
+
+    // * This test is for checking Single Number 
+    it('returns number itself for a single input', () => {
+        expect(add('9')).toBe(9) // Test for INPUT: '5' returning 5 
+    })
+
+
+
 });
