@@ -4,16 +4,17 @@
 [![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io)
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 An implementation of the [Incubyte's String Calculator Kata](https://blog.incubyte.co/blog/tdd-assessment/) following Test-Driven Development (TDD) principles, built with TypeScript and Jest. In this project I demonstrated clean code practices, comprehensive test coverage, and professional development workflows.
 
 ---
 
+
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#tech-stack">Tech Stack</a> •
   <a href="#installation">Installation</a> •
+  <a href="#tdd-approach">TDD Approach</a>
 </p>
 
 ## Key Features
@@ -50,3 +51,29 @@ cd string-calculator-tdd
 # Install dependencies
 npm ci  # Uses exact versions from package-lock.json
 ```
+
+## TDD Approach
+
+- Red Phase: Wrote failing test for feature
+- Green Phase: Minimal implementation to pass test
+- Refactor Phase: Improved code quality without changing behavior
+- Repeat: Atomic commits for each TDD cycle
+
+## CI/CD
+
+- GitHub Actions workflow ensures:
+- Automated testing on all pushes and PRs
+- Node.js version matrix testing (16.x, 18.x)
+- Strict type checking
+- Linting enforcement
+
+
+### Commit Message Guidelines:
+
+- `FEAT`: New functionality
+- `fix`: Bug resolution
+- `refactor`: Code improvement without behavior change
+- `docs`: Documentation updates
+
+
+<div align="center"> <sub>Developed with ❤︎ by Jayateerth Dambal | Incubyte TDD Assessment</sub> </div> ```
