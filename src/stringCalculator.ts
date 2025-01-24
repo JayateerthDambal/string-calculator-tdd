@@ -1,4 +1,7 @@
 export function add(numbers: string): number {
-    if (numbers === '') return 0; // Handle empty string
-    return parseInt(numbers, 10);  // Parses the Single INput
+    if (numbers === '') return 0;
+
+    return numbers.split(',')
+        .map(num => parseInt(num, 10))
+        .reduce((sum, num) => sum + num, 0);
 }
