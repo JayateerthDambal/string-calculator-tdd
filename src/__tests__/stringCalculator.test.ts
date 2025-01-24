@@ -25,4 +25,13 @@ describe('add', () => {
     it('supports custom delimiters', () => {
         expect(add('//;\n1;2')).toBe(3); // Assertion: "//;\n1;2" → 3
     });
+
+    // * This test if for negative inputs
+    it('throws error for negative numbers', () => {
+        // Single negative input
+        expect(() => add('-1,2')).toThrow('negatives not allowed: -1');
+        // Multiple negatives inputs
+        expect(() => add('2,-4,-5')).toThrow('negatives not allowed: -4, -5');
+    });
+
 });
