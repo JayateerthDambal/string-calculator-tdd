@@ -8,9 +8,7 @@
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage --collectCoverageFrom='src/**/*.ts'",
     "test:ci": "jest --ci --coverage --collectCoverageFrom='src/**/*.ts'",
-    "build": "tsc",
-    "precommit": "npm run lint && npm run test",
-    "prepare": "husky install"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "Jayateerth Dambal: jayateerth.dambal@gmail.com",
