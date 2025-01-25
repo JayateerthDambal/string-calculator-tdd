@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "coverage": "jest --coverage"
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage --collectCoverageFrom='src/**/*.ts'",
+    "test:ci": "jest --ci --coverage --collectCoverageFrom='src/**/*.ts'",
+    "build": "tsc",
+    "precommit": "npm run lint && npm run test",
+    "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jayateerth Dambal: jayateerth.dambal@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.14",
