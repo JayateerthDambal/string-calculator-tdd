@@ -8,6 +8,16 @@
 An implementation of the [Incubyte's String Calculator Kata](https://blog.incubyte.co/blog/tdd-assessment/) following Test-Driven Development (TDD) principles, built with TypeScript and Jest. In this project I demonstrated clean code practices, comprehensive test coverage, and professional development workflows.
 
 ---
+## Screenshots
+
+### 1. CLI Benchmark Command
+![Add Command Example](./snaps/benchmark.png)
+
+### 2. CLI Add Command
+![Test Command Example](./snaps/add-function.png)
+
+## Loom Video
+[Click Here for the Loom Video Demonstration](https://www.loom.com/share/433bc90a77504541940d1fe9b076b145?sid=8ba79cf7-f66f-4a6b-8800-45bf5ddd1564)
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
