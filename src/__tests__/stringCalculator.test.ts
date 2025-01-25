@@ -45,5 +45,4 @@ describe('add', () => {
     it('handles numbers equal to 1000', () => {
         expect(add('1000,2')).toBe(1002); // 1000 + 2 = 1002
     });
-
 });
