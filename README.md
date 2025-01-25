@@ -9,7 +9,6 @@ An implementation of the [Incubyte's String Calculator Kata](https://blog.incuby
 
 ---
 
-
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#tech-stack">Tech Stack</a> •
@@ -33,6 +32,7 @@ An implementation of the [Incubyte's String Calculator Kata](https://blog.incuby
 - **Multi-Character Delimiters**: Supports delimiters like `***` or `!!`
 - **Multiple Delimiters**: Handles formats like `//[*][%]\n1*2%3`
 - **Regex Safety**: Properly escapes special characters in delimiters
+- **Benchmarking**: Measure the performance of the string calculator with large inputs.
 
 ## Tech Stack
 
@@ -46,6 +46,7 @@ An implementation of the [Incubyte's String Calculator Kata](https://blog.incuby
 ## Installation
 
 ### Prerequisites
+
 - Node.js v18+
 - npm v9+
 
@@ -57,6 +58,32 @@ cd string-calculator-tdd
 # Install dependencies
 npm ci  # Uses exact versions from package-lock.json
 ```
+
+### CLI Tool
+
+The String Calculator CLI Tool lets you interactively test the functionality of the calculator directly from your terminal. It includes commands for operations, testing, and benchmarking.
+
+### Created Commands
+
+  1. Add Numbers
+
+  ```bash
+  npm run build
+  npm link
+  string-calculator add "<input>"
+  ```
+
+  2. Run Predefined Tests
+
+  ```bash
+  string-calculator test
+  ```
+
+  3. Run Benchmark on Large Inputs
+
+  ```bash
+  string-calculator benchmark
+  ```
 
 ## TDD Approach
 
@@ -73,13 +100,25 @@ npm ci  # Uses exact versions from package-lock.json
 - Strict type checking
 - Linting enforcement
 
-
-### Commit Message Guidelines:
+### Commit Message Guidelines
 
 - `FEAT`: New functionality
 - `fix`: Bug resolution
 - `refactor`: Code improvement without behavior change
 - `docs`: Documentation updates
 
+### Feel Free to Add Changes
+
+Fork the repository.
+Create a feature branch: git checkout -b feature/<feature-name>.
+Commit changes: git commit -m "Add: <feature-description>".
+Push to the branch: git push origin feature/<feature-name>.
+Open a pull request on the repo.
+
+### Summary of Updates
+
+- Added CLI Tool with commands for add, test, and benchmark.
+- Enhanced README to reflect CLI instructions, examples, and features.
+- Ensured strict practice to TDD and clean coding practices.
 
 <div align="center"> <sub>Developed with ❤︎ by Jayateerth Dambal | Incubyte TDD Assessment</sub> </div> ```
